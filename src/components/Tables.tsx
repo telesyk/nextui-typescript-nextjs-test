@@ -1,4 +1,4 @@
-"use server";
+"use client";
 
 import {
   Table,
@@ -52,7 +52,7 @@ const columns = [
   },
 ];
 
-export default async function Tables() {
+export default function Tables() {
   return (
     <Table aria-label="Example table with dynamic content">
       <TableHeader columns={columns}>
@@ -62,7 +62,9 @@ export default async function Tables() {
         {(item) => (
           <TableRow key={item.key}>
             {(columnKey) => (
-              <TableCell>{getKeyValue(item, columnKey)}</TableCell>
+              <TableCell className="text-gray-700 dark:text-gray-200">
+                {getKeyValue(item, columnKey)}
+              </TableCell>
             )}
           </TableRow>
         )}

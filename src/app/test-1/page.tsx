@@ -1,5 +1,3 @@
-"use server";
-
 import Tables from "@/components/Tables";
 
 export default async function Page() {
