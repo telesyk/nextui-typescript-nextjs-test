@@ -1,8 +1,8 @@
-import { Progress, Button } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import LoginModal from "@/components/LoginModal";
 import Avatars from "@/components/Avatars";
-import Tooltips from "@/components/Tooltips";
 import UserBlock from "@/components/User";
+import Progresses from "@/components/Progresses";
 
 export default function Home() {
   return (
@@ -17,18 +17,10 @@ export default function Home() {
         <LoginModal />
       </div>
       <div className="py-2">
-        <Tooltips />
-      </div>
-      <div className="py-2">
         <Button isLoading>Click me</Button>
       </div>
       <div className="py-2 w-64">
-        <Progress
-          size="sm"
-          isIndeterminate
-          aria-label="Loading..."
-          className="max-w-md"
-        />
+        <Progresses />
       </div>
     </>
   );
